@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="Sandra's Portfolio Website">
+<meta name="keywords" content="web, portfolio, data science, software development, web development">
+<meta name="author" content="Sandra Campuzano">
+
+        <title>Interactive Character Profile</title>
+
+        <link rel="stylesheet" href="styles.css">
+        <script src="slideshow.js"></script>
+    </head>
+
+<body>
+
+    <h1><img src="images/banner.PNG"></h1>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="charaalpha.html">Characters (Alphabetically)</a></li>
+
+            <li class="dropdown"><button class="dropdownbtn">Characters (By Series)</button>
+                <div class="dropdown-content">
+                    <a href="ffxivpf.html">Final Fantasy XIV</a>
+                    <a href="wowpf.html">World of Warcraft</a>
+                </div>
+            </li>
+
+            <li>
+            <div class="search-container">
+                <form action="/action_page.php">
+                  <input type="text" placeholder="Search..." name="search">
+                  <button type="submit">Search</button>
+                </form>
+              </div>
+            </li>
+            
+        <div class="iconlinks">
+            <div class="linkspace"><a href="https://github.com/scampuzano7" target="_blank"><img src="images/social.png"></a></div>
+            <div class="linkspace"><a href="https://www.linkedin.com/in/sandraicampuzano/" target="_blank"><img src="images/linkedin.png"></a></div>
+            <div class="linkspace"><a href="https://www.polywork.com/sandra_campuzano" target="_blank"><img src="images/polywork.png"></a></div>
+        </div>
+
+    </ul>
+
+
+    <div class="sitecontainer">
+
+        <div class="container">
+
+            <div class="name-container">
+                <div class="name">Rozabella Dracos</div>
+            </div>
+
+            
+            <div class="pfsections">
+                Age:</br>
+                Height:</br>
+                Weight/Size:</br>
+                Hair Color:</br>
+                Hair Texture:</br>
+                Eye Color:</br>
+                Skin Tone:</br>
+                Race:</br>
+                Main Job:</br>
+                Secondary Job:</br>
+                Thirdary Job:</br>
+            </div>
+
+            <div class="pfinfo">
+                Adult</br>
+                6'5"</br>
+                Curvy</br>
+                Dark Reddish Brown</br>
+                Curly/Coily (3B/3C)</br>
+                Gold</br>
+                Dark Tan</br>
+                Garlean</br>
+                SMN</br>
+                DNC</br>
+                PLD</br>
+            </div>
+
+            <div class="pagenumberone">1/2</div>
+
+
+            <a href="rdracostwo.html">
+                <button class="nextpage">Next</button>
+              </a>
+
+        </div>
+        
+        <div class="descbox">
+            About Rose.
+        </div>
+
+        <div class="slideShow">
+            
+            <div class="mySlides fade">
+                <img src="images/rozzenos.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/galvusfam.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/rozabella.JPG" style="width:100%" >
+            </div>
+
+            <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
+            <a class="next" onclick="plusDivs(1)">&#10095;</a>
+
+            <div style="text-align: center;">
+
+            <span class="dot" onclick="currentDiv(1)"></span>
+            <span class="dot" onclick="currentDiv(2)"></span>
+            <span class="dot" onclick="currentDiv(3)"></span>
+
+        </div>
+    
+        </div>
+
+
+    </div>
+
+    <div class="footer">
+        Interactive Character Profile (C) xPR
+    </div>
+    <script> showDivs(slideIndex); </script>
+</body>
