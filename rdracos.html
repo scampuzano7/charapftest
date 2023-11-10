@@ -9,19 +9,16 @@
 
         <title>Interactive Character Profile</title>
 
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-
         <link rel="stylesheet" href="styles.css">
+        <script src="slideshow.js"></script>
     </head>
 
 <body>
 
-    <h1><img src="images/banner.PNG"></h1>
+        <h1><img src="images/banner.PNG"></h1>
 
     <ul>
         <li><a href="index.html">Home</a></li>
-
         <li><a href="charaalpha.html">Characters (Alphabetically)</a></li>
 
             <li class="dropdown"><button class="dropdownbtn">Characters (By Series)</button>
@@ -82,24 +79,48 @@
                 Dark Tan</br>
                 Garlean</br>
                 SMN - Lvl 90</br>
-                DNC - Lvl 90</br>
-                PLD - Lvl 90</br>
+                DNC - Lvl 80</br>
+                PLD - Lvl 76</br>
             </div>
 
-            <a href="rdracos.html">
-                <button class="backpage">Back</button>
+            <div class="pagenumberone">1/2</div>
+
+
+            <a href="rdracostwo.html">
+                <button class="nextpage">Next</button>
               </a>
 
-              <div class="pagenumbertwo">2/2</div>
- 
         </div>
-
+        
         <div class="descbox">
-            TBD
+            About Rose.
         </div>
 
-        <model-viewer src="rozabella/rozabella.glb" camera-controls></model-viewer>
+        <div class="slideShow">
+            
+            <div class="mySlides fade">
+                <img src="images/rozzenos.PNG" style="width:100%">
+            </div>
 
+            <div class="mySlides fade">
+                <img src="images/galvusfam.PNG" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="images/rozabella.JPG" style="width:100%" >
+            </div>
+
+            <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
+            <a class="next" onclick="plusDivs(1)">&#10095;</a>
+
+            <div style="text-align: center;">
+
+            <span class="dot" onclick="currentDiv(1)"></span>
+            <span class="dot" onclick="currentDiv(2)"></span>
+            <span class="dot" onclick="currentDiv(3)"></span>
+
+        </div>
+    
         </div>
 
 
@@ -108,4 +129,5 @@
     <div class="footer">
         Interactive Character Profile (C) xPR
     </div>
+    <script> showDivs(slideIndex); </script>
 </body>
