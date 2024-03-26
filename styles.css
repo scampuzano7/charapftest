@@ -2,23 +2,34 @@
     box-sizing: border-box;
 }
 
-h1 img {
-  width: 800px;
-  height: 100px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  background-image: linear-gradient(rgb(255, 192, 203, 0.50), rgb(204, 178, 237, 0.50), rgb(255, 255, 255, 0.50));
-  border: 5px ridge rgb(202, 121, 134);
-  border-radius: 15px;
+:root {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    padding: 0;
-    margin: 0;
-    background-image: linear-gradient(rgba(255, 162, 223, 0.4), rgba(198, 154, 255, 0.4)), url("images/cloud.PNG");
+body {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(rgba(248, 200, 231, 0.4), rgba(208, 186, 236, 0.4));
+}
+
+.header {
+  width: 700px;
+  height: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 25px;
+  padding: 20px;
+  text-align: center;
+  color: rgb(230, 120, 138);
+  background-image: linear-gradient(rgba(248, 200, 231, 0.4), rgba(208, 186, 236, 0.4));
+  border-radius: 15px;
+  border: 0.5px ridge rgb(202, 121, 134);
+  font-size: 25px;
 }
   
 /* Stylizaton for the footer/bottom area */
@@ -27,76 +38,54 @@ body{
     background-color: transparent;
     padding: 10px;
     font-size: 12px;
-    color: black;
-    border-top: 0.5px solid black;
+    color: rgb(230, 120, 138);
+    border-top: 0.5px ridge rgb(202, 121, 134);
     width: 85%;
     margin: 0px 100px 0px 100px;
-    position: absolute;
+    position: static;
   }
 
 /* Stylization for navigation bar */
-ul {
-    list-style-type: none;
-    margin: 0px 25px 0px 25px;
-    padding: 10px;
-    overflow: hidden;
-    border-bottom: 0.5px solid black;
-    border-top: 0.5px solid black;
-    height: 50px;
-    font-size: 12px;
+
+.nav {
+  border-bottom: 0.5px ridge rgb(202, 121, 134);
+  border-top: 0.5px ridge rgb(202, 121, 134);
+  height: 50px;
+  font-size: 12px;
+  width: calc(100% - 200px);
+  margin: 50px 0 0 0;
 }
 
+ul {
+  list-style-type: none;
+  overflow: hidden;
+}
 
 li {
-    float: left;
+  display: inline-block;
 }
-
-/* Search bar */
-
-
-.search-container {
-    float: right;
-  }
-  
-.search-container input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 12px;
-    border: none;
-    border-radius: 5px;
-  }
-  
-.search-container button {
-    float: right;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background-image: linear-gradient(pink, rgb(204, 178, 237), white);
-    font-size: 12px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-.search-container button:hover {
-    background: #ccc;
-  }
-
 
 /* Dropdown menu */
 
 li a, .dropdownbtn {
-    display: inline-block;
-    color: black;
+    color: rgb(230, 120, 138);
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
     border: none;
     background: transparent;
+    font-size: 14px;
+}
+
+.dropdownbtn {
+  padding: 14px 16px;
+}
+
+li a {
+  padding: 12px 16px;
 }
 
 li a:hover, .dropdown:hover .dropdownbtn {
-  color: rgb(53, 93, 129);
+  color: rgb(147, 46, 214);
 }
 
 li.dropdown {
@@ -113,7 +102,7 @@ li.dropdown {
 }
 
 .dropdown-content a {
-    color: black;
+    color: rgb(230, 120, 138);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -126,7 +115,7 @@ li.dropdown {
 
 /* Icon links to GH, LinkedIN, Poly */
 .iconlinks {
-    color: black;
+    color: transparent;
     padding: 5px;
     display: flex;
     width: 10%;
@@ -141,25 +130,29 @@ li.dropdown {
 /* Containers for layout*/
 
 .sitecontainer {
-    height: auto;
-    width: 1050px;
-    display: grid;
-    padding: 25px;
+  height: auto;
+  width: auto;
+  padding: 25px;
+  align-content: center;
+  display: grid;
+  gap: 100px;
 }
 
 .container {
-    padding: 10px;
-    margin: 25px 100px 0px 100px;
-    width: 400px;
+    padding: 0;
+    margin: 30px 0px 0px 0px;
+    width: 600px;
+    height: 725px;
     display: grid;
     background: transparent;
-    height: 475px;
     gap: 10px;
-    grid-template-rows: 3;
+    grid-template-rows: 4;
     grid-template-columns: 2;
     border-radius: 15px;
     grid-row: 1;
     grid-column: 1/2;
+    overflow: hidden;
+    font-size: 14px;
 }
 
 .name-container {
@@ -169,7 +162,27 @@ li.dropdown {
     grid-column: 1/3;
     background-image: linear-gradient(rgb(255, 192, 203, 0.50), rgb(204, 178, 237, 0.50), rgb(255, 255, 255, 0.50));
     border-radius: 15px;
-    border: 5px ridge rgb(202, 121, 134);
+    border: 1px ridge rgb(202, 121, 134);
+    color: rgb(230, 120, 138)
+}
+
+/* Description Box */
+
+.descbox {
+  padding: 5px;
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0px;
+  border-radius: 15px;
+  background-image: linear-gradient(rgb(255, 192, 203, 0.50), rgb(204, 178, 237, 0.50), rgb(255, 255, 255, 0.50));
+  position: relative;
+  grid-row: 4;
+  grid-column: 1/3;
+  border: 1px ridge rgb(202, 121, 134);
+  text-indent: 25px;
+  line-height: 2;
+  font-size: 12px;
 }
 
 /* Stylization for pf sections */
@@ -183,7 +196,7 @@ li.dropdown {
     padding: 10px;
     grid-row: 2;
     grid-column: 1;
-    border: 5px ridge rgb(202, 121, 134);
+    border: 1px ridge rgb(202, 121, 134);
 
 }
 
@@ -196,7 +209,7 @@ li.dropdown {
     padding: 10px;
     grid-row: 2;
     grid-column: 2;
-    border: 5px ridge rgb(202, 121, 134);
+    border: 1px ridge rgb(202, 121, 134);
 }
 
 .name {
@@ -213,8 +226,9 @@ li.dropdown {
     font-size: 12px;
     border: none;
     cursor: pointer;
-    border-radius: 15px;
-    border: 5px ridge rgb(202, 121, 134);
+    border-radius: 10px;
+    border: 1px ridge rgb(202, 121, 134);
+    height: 30px;
   }
 
   .nextpage {
@@ -232,11 +246,12 @@ li.dropdown {
     padding: 6px;
     background-image: linear-gradient(rgb(255, 192, 203, 0.50), rgb(204, 178, 237, 0.50), rgb(255, 255, 255, 0.50));
     font-size: 12px;
-    border-radius: 15px;
+    border-radius: 10px;
     position: relative;
     width: 45px;
     text-align: center;
-    border: 5px ridge rgb(202, 121, 134);
+    border: 1px ridge rgb(202, 121, 134);
+    height: 30px;
   }
 
   .pagenumberone {
@@ -247,31 +262,12 @@ li.dropdown {
     left: 75%
   }
 
-
-/* Description Box */
-
-.descbox {
-  padding: 5px;
-  height: 200px;
-  width: 400px;
-  overflow: hidden;
-  margin: 0px 0px 0px 100px;
-  border-radius: 15px;
-  background-image: linear-gradient(rgb(255, 192, 203, 0.50), rgb(204, 178, 237, 0.50), rgb(255, 255, 255, 0.50));
-  position: relative;
-  top: -115%;
-  grid-row: 2;
-  grid-column: 1;
-  border: 5px ridge rgb(202, 121, 134);
-
-}
-
 /* Character Image Slideshow */
 
 /* Slideshow container */
 .slideShow {
     padding: 0px;
-    margin: 25px 0px 0px 80px;
+    margin: 25px 0px 0px 0px;
     width: 600px;
     border-radius: 15px;
     overflow: hidden;
@@ -286,7 +282,7 @@ li.dropdown {
     vertical-align: middle;
     height: 695px;
     border-radius: 15px;
-    border: 5px ridge rgb(202, 121, 134);
+    border: 2px ridge rgb(202, 121, 134);
 }
 
 /* PButtons */
@@ -322,10 +318,11 @@ li.dropdown {
     height: 15px;
     width: 15px;
     margin: 15px 2px;
-    background-color: black;
+    background-color: white;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+    border: 1px solid rgb(230, 120, 138);
 
 }
 
@@ -367,163 +364,11 @@ model-viewer {
   padding: 5px;
   width: 600px;
   height: 725px;
-  margin: 25px 100px 10px 80px;
-  grid-column: 2/2;
-  grid-row: 1/1;
+  margin: 25px 0px 0px 0px;
+  grid-column: 2;
+  grid-row: 1;
   position: relative;
   border-radius: 15px;
-  background-image: linear-gradient(pink, rgb(204, 178, 237), white);
-  border: 5px ridge rgb(202, 121, 134);
-}
-
-/* Characters in alphabetical order */
-
-/* Individual alphabetical containers within grid */
-
-.boxA, .boxB, .boxC, .boxD, .boxE, .boxF, .boxG, .boxH, .boxI, 
-.boxJ, .boxK, .boxL, .boxM, .boxN, .boxO, .boxP, .boxQ, .boxR,
-.boxS, .boxT, .boxU, .boxV, .boxW, .boxX, .boxY, .boxZ {
-
-    padding: 10px;
-    margin: 25px 10px 0px 10px;
-    width: 200px;
-    display: grid;
-    background-image: linear-gradient(pink, rgb(204, 178, 237), white);
-    height: 90px;
-    border-radius: 15px;
-    overflow: hidden;
-    font-size: 12px;
-    line-height: 100%;
-    border: 5px ridge rgb(202, 121, 134);
-}
-
-.boxA, .boxF, .boxK, .boxP, .boxU, .boxZ {
-  grid-row: 1;
-}
-
-.boxA, .boxB, .boxC, .boxD, .boxE {
-  grid-column: 1;
-}
-
-.boxB, .boxG, .boxL, .boxQ, .boxV {
-  grid-row: 2;
-}
-
-.boxF, .boxG, .boxH, .boxI, .boxJ {
-  grid-column: 2;
-}
-
-.boxC, .boxH, .boxM, .boxR, .boxW {
-  grid-row: 3;
-}
-
-.boxK, .boxL, .boxM, .boxN, .boxO {
-  grid-column: 3;
-}
-
-.boxD, .boxI, .boxN, .boxS, .boxX {
-  grid-row: 4;
-}
-
-.boxP, .boxQ, .boxR, .boxS, .boxT {
-  grid-column: 4;
-}
-
-.boxE, .boxJ, .boxO, .boxT, .boxY {
-  grid-row: 5;
-}
-
-.boxU, .boxV, .boxW, .boxX, .boxY {
-  grid-column: 5;
-}
-
-.boxZ {
-  grid-column: 6;
-}
-
-/* FFXIV Character Profile Page */
-
-/* The site container heehoo */
-.ffsitecontainer {
-  height: auto;
-  width: auto;
-  padding: 25px;
-  align-content: center;
-  display: grid;
-  gap: 0px;
-}
-
-/* Boxes for each section */
-
-.ffsections {
-  padding: 10px;
-  margin: 25px 50px 0px 50px;
-  width: 850px;
-  display: grid;
-  background-image: linear-gradient(pink, rgb(204, 178, 237), white);
-  height: 300px;
-  border-radius: 15px;
-  overflow: hidden;
-  font-size: 12px;
-  align-self: center;
-  justify-self: center;
-}
-
-/* Titles for the sections */
-
-.fftitles{
-  padding: 10px;
-  margin: 25px 50px 0px 50px;
-  width: 850px;
-  display: grid;
-  background-image: linear-gradient(pink, rgb(204, 178, 237), white);
-  height: 50px;
-  border-radius: 15px;
-  overflow: hidden;
-  font-size: 12px;
-  align-self: center;
-   justify-self: center;
-   text-align: center;
-}
-
-/* Boxes for the subsection content */
-
-.ffsubsections { 
-  text-align: left;
-  line-height: 200%;
-  grid-row: 1;
-}
-
-/* Home Page Stuff */
-
-.pagesection {
-  padding: 10px;
-  margin: 25px 50px 0px 50px;
-  width: 850px;
-  display: grid;
-  background-image: linear-gradient(pink, rgb(204, 178, 237), white);
-  height: 300px;
-  border-radius: 15px;
-  overflow: hidden;
-  font-size: 12px;
-  align-self: center;
-  justify-self: center;
-  grid-row: 2;
-  grid-column: 1;
-}
-
-.pagetitle{
-  padding: 10px;
-  margin: 25px 50px 0px 50px;
-  width: 450px;
-  display: grid;
-  background-image: linear-gradient(pink, rgb(204, 178, 237), white);
-  height: 50px;
-  border-radius: 15px;
-  overflow: hidden;
-  font-size: 15px;
-  justify-self: center;
-  text-align: center;
-  grid-row: 1;
-  grid-column: 1;
+  background: rgb(202, 195, 195);
+  border: 1px ridge rgb(202, 121, 134);
 }

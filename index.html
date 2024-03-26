@@ -15,35 +15,67 @@
 
 <body>
 
-        <h1><img src="images/banner.PNG"></h1>
+        <div class="header">Interactive Character Profile</div>
 
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="charaalpha.html">Characters (Alphabetically)</a></li>
-
-            <li class="dropdown"><button class="dropdownbtn">Characters (By Series)</button>
-                <div class="dropdown-content">
-                    <a href="ffxivpf.html">Final Fantasy XIV</a>
-                    <a href="wowpf.html">World of Warcraft</a>
-                </div>
-            </li>
-
-            <li>
-            <div class="search-container">
-                <form action="/action_page.php">
-                  <input type="text" placeholder="Search..." name="search">
-                  <button type="submit">Search</button>
-                </form>
+        <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+      
+            <li class="dropdown">
+              <button class="dropdownbtn">About</button>
+              <div class="dropdown-content">
+                <a href="aboutme.html">About Me</a>
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact Me</a>
               </div>
             </li>
-            
-        <div class="iconlinks">
-            <div class="linkspace"><a href="https://github.com/scampuzano7" target="_blank"><img src="images/github.PNG"></a></div>
-            <div class="linkspace"><a href="https://www.linkedin.com/in/sandraicampuzano/" target="_blank"><img src="images/linkedin.png"></a></div>
-            <div class="linkspace"><a href="https://blinq.me/nKwpZrChVP0Q?bs=db" target="_blank"><img src="images/blinq.PNG"></a></div>
-        </div>
-
-    </ul>
+      
+            <li class="dropdown">
+              <button class="dropdownbtn">Projects</button>
+              <div class="dropdown-content">
+                <a
+                  href="https://devpost.com/software/shehired"
+                  target="_blank"
+                  >SheHired</a
+                >
+                <a
+                  href="https://scampuzano7.github.io/charapftest/index.html"
+                  target="_blank"
+                  >Interactive Character Profile</a
+                >
+                <a
+                  href="https://currencyconverterapp-12c780db7ef6.herokuapp.com"
+                  target="_blank"
+                  >Currency Converter</a
+                >
+                <a href="https://scampuzano7.github.io/calculatorapp/" target="_blank"
+                  >Calculator</a
+                >
+                <a href="https://scampuzano7.github.io/weatherapp/" target="_blank"
+                  >Weather App</a
+                >
+              </div>
+            </li>
+      
+            <div class="iconlinks">
+              <div class="linkspace">
+                <a href="https://github.com/scampuzano7" target="_blank"
+                  ><img src="images/github.PNG"
+                /></a>
+              </div>
+              <div class="linkspace">
+                <a
+                  href="https://www.linkedin.com/in/sandraicampuzano/"
+                  target="_blank"
+                  ><img src="images/linkedin.png"
+                /></a>
+              </div>
+              <div class="linkspace">
+                <a href="https://blinq.me/nKwpZrChVP0Q?bs=db" target="_blank"
+                  ><img src="images/blinq.PNG"
+                /></a>
+              </div>
+            </div>
+          </ul>
 
 
     <div class="sitecontainer">
@@ -58,7 +90,7 @@
             <div class="pfsections">
                 Age:</br>
                 Height:</br>
-                Weight/Size:</br>
+                Weight Class:</br>
                 Hair Color:</br>
                 Hair Texture:</br>
                 Eye Color:</br>
@@ -72,7 +104,7 @@
             <div class="pfinfo">
                 Adult</br>
                 6'5"</br>
-                Curvy</br>
+                Mid</br>
                 Dark Reddish Brown</br>
                 Curly/Coily (3B/3C)</br>
                 Gold</br>
@@ -86,28 +118,33 @@
             <div class="pagenumberone">1/2</div>
 
 
-            <a href="rdracostwo.html">
+            <a href="model.html">
                 <button class="nextpage">Next</button>
               </a>
-
+              <div class="descbox">
+                Rose hails from the Garlean empire, having been raised in all the finest luxuries money could buy.
+                Upon reaching adulthood, she made the difficult decision to leave her family and abandon the empire she was destined to co-rule,
+                to explore the world and find her own path.
+                She first became a summoner upon landing in Limsa Lominsa, where she met the first of her Eorzean friends.
+                Finding herself as one of the few Garleans who could wield magic, she was quickly accepted into the ranks of the Scions of the Seventh Dawn,
+                and eventually became the Warrior of Light. She is known for her fierce loyalty, magical prowess, and for aiding in saving multiple worlds from destruction.
+            </div>
         </div>
         
-        <div class="descbox">
-            About Rose.
-        </div>
+       
 
         <div class="slideShow">
             
             <div class="mySlides fade">
-                <img src="images/rozzenos.PNG" style="width:100%">
+                <img src="images/roseread.png" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <img src="images/galvusfam.PNG" style="width:100%">
+                <img src="images/roseprincess.png" style="width:100%">
             </div>
 
             <div class="mySlides fade">
-                <img src="images/rozabella.JPG" style="width:100%" >
+                <img src="images/rosereaper.png" style="width:100%" >
             </div>
 
             <a class="prev" onclick="plusDivs(-1)">&#10094;</a>
